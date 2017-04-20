@@ -1,0 +1,3 @@
+https://pypi.python.org/pypi/ImageHash
+
+https://7webpages.com/blog/image-duplicates-detection-python/
