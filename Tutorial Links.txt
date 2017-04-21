@@ -1,3 +1,7 @@
 https://pypi.python.org/pypi/ImageHash
 
 https://7webpages.com/blog/image-duplicates-detection-python/
+
+http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_video/py_table_of_contents_video/py_table_of_contents_video.html
+
+https://github.com/julapy/ofxOpticalFlowLK/tree/master/src - People counter with c++
