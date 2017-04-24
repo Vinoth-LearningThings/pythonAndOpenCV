@@ -5,3 +5,15 @@ https://7webpages.com/blog/image-duplicates-detection-python/
 http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_video/py_table_of_contents_video/py_table_of_contents_video.html
 
 https://github.com/julapy/ofxOpticalFlowLK/tree/master/src - People counter with c++
+
+
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy   - download numpy & scipy packages 
+
+ numpy+mkl - numpy‑1.12.1+mkl‑cp34‑cp34m‑win32.whl
+ 
+ scipy - scipy-0.19.0-cp27-cp27m-win32.whl
+ 
+ 
+ https://github.com/7WebPages/comparer - 7 webpages
+ 
+ 
