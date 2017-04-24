@@ -2,9 +2,12 @@ import cv2
 import numpy as np
 
 faceDetect = cv2.CascadeClassifier('haarcascade_frontalface_default.xml');
-cam=cv2.VideoCapture("video1.mp4");
+cam = cv2.VideoCapture()
+cam.open("http://192.168.0.103:8080/video?x.mpeg");
 
-while(True):
+print cam.isOpened()
+
+while(cam.isOpened()):
     ret, img = cam.read();
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY);
     faces = faceDetect.detectMultiScale(gray, 1.3, 5);
