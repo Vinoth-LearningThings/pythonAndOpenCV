@@ -5,10 +5,11 @@ import urllib2
 
 faceDetect = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 #cam = cv2.VideoCapture('airport_footage.mp4')
-stream=urllib2.urlopen('http://192.168.42.129:8080/video?x=y')
+stream=urllib2.urlopen('http://192.168.42.129:8080//video?x=y')
 bytes=''
-s1
-s2
+s1=''
+s2=''
+dhashArray = []
 
 def dhash(image, hash_size = 8):
         # Grayscale and shrink the image in one step.
@@ -59,15 +60,27 @@ while True:
                 cv2.rectangle(img, (x,y),(x+w,y+h), (0,255,0), 2)
                 image = Image.fromarray(img[y:y+h,x:x+w])
                 print dhash(image)
-                if s1 is None:
+                if s1 == '':
                         s1 = dhash(image)
+                        currFace = s1
                 else:
                         if s1 != dhash(image):
                                 s2 = dhash(image)
+                                currFace = s2
                                 
                 print 's1', s1
                 print 's2', s2
-                print 'hammingDistance', hamming2(s1, s2)
+                if len(dhashArray) > 0:
+                        for dhashValue in dhashArray:
+                                hamDist = hamming2(dhashValue,currFace)
+                                print hamDist
+                                if hamDist > 50:
+                                        dhashArray.append(dhashValue)
+                                        #add service call
+                else:
+                        dhashArray.append(currFace)
+                print 'dhashArray', dhashArray
+
         cv2.namedWindow('faceDetector',cv2.WINDOW_NORMAL);
         cv2.resizeWindow('faceDetector', 600,300);
         cv2.imshow("faceDetector", img);

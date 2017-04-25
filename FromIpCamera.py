@@ -3,7 +3,7 @@ import urllib
 import numpy as np
 
 faceDetect = cv2.CascadeClassifier('haarcascade_frontalface_default.xml');
-stream=urllib.urlopen("http://192.168.0.103:8080/video?x=y");
+stream=urllib.urlopen("http://192.168.42.129:8080/video?x=y");
 bytes=''
 
 while True:
