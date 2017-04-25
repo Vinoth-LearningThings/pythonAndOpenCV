@@ -7,8 +7,8 @@ from hash_utils import Hash
 #first_image = Image.open('c.png')
 #second_image = Image.open('b.png')
 
-first_image_hasher = Hash('user1576.jpg')
-second_image_hasher = Hash('user1575.jpg')
+first_image_hasher = Hash('User_1.jpg')
+second_image_hasher = Hash('User_2.jpg')
 
 first_image_score = first_image_hasher.ahash()
 second_image_score = second_image_hasher.ahash()

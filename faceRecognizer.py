@@ -2,8 +2,8 @@ import cv2
 import cv2.cv as cv
 
 detector=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-cam= cv2.VideoCapture("HD_Footage.mp4")
-cap = cv.CaptureFromFile("HD_Footage.mp4")
+cam= cv2.VideoCapture("video1.mp4")
+cap = cv.CaptureFromFile("video1.mp4")
 
 nframes=int(cv.GetCaptureProperty(cap,cv.CV_CAP_PROP_FRAME_COUNT))
 fps= int(cv.GetCaptureProperty(cap,cv.CV_CAP_PROP_FPS))

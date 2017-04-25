@@ -9,7 +9,7 @@ class Hash(object):
     def __init__(self, image):
         if not isinstance(image, basestring):
             image.seek(0)
-        self.image = Image.open(image)
+        self.image = image
 
     def prepare_image(self, crop_width_perc=0, crop_height_perc=0, fit_image=True):
         result = self.image
